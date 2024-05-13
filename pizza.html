@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Weboldal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Pizza Ház</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Pizzák</a></li>
+            <li><a href="#">Rendelés</a></li>
+            <li><a href="#">Kapcsolat</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="pizza-menu">
+            <h2>Legnépszerűbb Pizzák</h2>
+            <div class="pizza">
+                <img src="pizza1.jpg" alt="Margherita">
+                <h3>Margherita</h3>
+                <p>Szósz, mozzarella sajt, bazsalikom</p>
+                <p class="price">Ár: $8</p>
+                <button onclick="addToCart('Margherita', 8)">Kosárba</button>
+            </div>
+            <div class="pizza">
+                <img src="pizza2.jpg" alt="Hawaii">
+                <h3>Hawaii</h3>
+                <p>Szósz, sonka, ananász, mozzarella sajt</p>
+                <p class="price">Ár: $10</p>
+                <button onclick="addToCart('Hawaii', 10)">Kosárba</button>
+            </div>
+            <!-- További pizzák... -->
+        </section>
+        <section id="cart">
+            <h2>Kosár</h2>
+            <ul id="cart-items">
+                <!-- Itt lesznek a kosárban lévő elemek dinamikusan generálva -->
+            </ul>
+            <div id="total">Összesen: $0</div>
+            <button onclick="order()">Rendelés</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Pizza Ház</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
