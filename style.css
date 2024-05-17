@@ -125,3 +125,34 @@ footer {
     text-align: center;
     padding: 20px;
 }
+
+#pizza-menu{
+    display: grid;
+    grid-template-columns: repeat(3,2fr);
+}
+
+
+#order-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50; /* Zöld háttérszín */
+    color: white; /* Fehér szöveg */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none;
+    transition: opacity 0.5s ease;
+}
+
+#order-message.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#order-message.visible {
+    display: block;
+    opacity: 1;
+}
